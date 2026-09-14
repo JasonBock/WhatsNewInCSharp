@@ -5,7 +5,7 @@ using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Numerics;
 
-namespace WritingModernCSharp;
+namespace WhatsNewInCSharp;
 
 public sealed record Person(Guid Id, string Name, uint Age)
 	: IParsable<Person>,

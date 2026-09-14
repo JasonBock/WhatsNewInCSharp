@@ -62,8 +62,11 @@ Console.WriteLine(olderWitherJane);
 
 Console.WriteLine();
 // Change this for collection expressions.
-Console.WriteLine($"Average is : {Average(new List<Person> { jane, joe })}");
+Console.WriteLine($"Average is : {Average([jane, joe])}");
 
-static T Add<T>(T left, T right) where T : IAdditionOperators<T, T, T> => left + right;
+static T Add<T>(T left, T right) where T : IAdditionOperators<T, T, T>
+{
+	return left + right;
+}
 
-static double Average(IEnumerable<Person> people) => people.Average(_ => _.Age);
+static double Average(IEnumerable<Person> people) { return people.Average(_ => _.Age); }

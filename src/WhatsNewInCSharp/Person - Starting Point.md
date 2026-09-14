@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WritingModernCSharp
+namespace WhatsNewInCSharp
 {
 	public sealed class Person
 	{
