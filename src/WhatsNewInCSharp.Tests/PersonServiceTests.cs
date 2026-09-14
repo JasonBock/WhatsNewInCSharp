@@ -15,7 +15,7 @@ internal static class PersonServiceTests
 		var person = new Person(id, "Jason", 21);
 
 		var expectations = new IPersonRepositoryCreateExpectations();
-		expectations.Setups.Retrieve(id).ReturnValue(person);
+		_ = expectations.Setups.Retrieve(id).ReturnValue(person);
 
 		var mock = expectations.Instance();
 		var service = new PersonService(mock);
@@ -31,7 +31,7 @@ internal static class PersonServiceTests
 		var id = Guid.NewGuid();
 
 		var expectations = new IPersonRepositoryCreateExpectations();
-		expectations.Setups.Retrieve(id).ReturnValue(null);
+		_ = expectations.Setups.Retrieve(id).ReturnValue(null);
 
 		var mock = expectations.Instance();
 		var service = new PersonService(mock);

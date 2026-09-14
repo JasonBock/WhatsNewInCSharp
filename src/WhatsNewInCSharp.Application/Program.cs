@@ -15,8 +15,17 @@ Console.WriteLine(joe);
 Console.WriteLine();
 Console.WriteLine();
 
-Console.WriteLine("Adding two persons...");
+Console.WriteLine("Sorting people...");
+SortedSet<Person> people = [with(new PersonComparer()), joe, jane];
+
+foreach (var person in people)
+{
+	Console.WriteLine(person);
+}
+
 Console.WriteLine();
+Console.WriteLine();
+Console.WriteLine("Adding two persons...");
 
 var janeJoe = Add(jane, joe);
 
