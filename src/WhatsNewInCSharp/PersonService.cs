@@ -1,6 +1,4 @@
-﻿using System.Data.Common;
-
-namespace WhatsNewInCSharp;
+﻿namespace WhatsNewInCSharp;
 
 public sealed class PersonService
 {
@@ -26,4 +24,6 @@ public sealed class PersonService
 	private IPersonRepository Repository { get; }
 }
 
+#pragma warning disable CA1815 // Override equals and operator equals on value types
 public union Result<TSuccess, TFailure>(TSuccess, TFailure);
+#pragma warning restore CA1815 // Override equals and operator equals on value types

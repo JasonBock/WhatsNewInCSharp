@@ -55,8 +55,6 @@ public sealed record Person(Guid Id, string Name, uint Age)
 		return false;
 	}
 
-#pragma warning disable IDE0090 // Use 'new(...)'
 	public static Person operator +(Person a, Person b) =>
 		new Person(Guid.NewGuid(), $"{a?.Name} {b?.Name}", 0);
-#pragma warning restore IDE0090 // Use 'new(...)'
 }
